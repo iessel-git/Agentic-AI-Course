@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 3: Agent Architecture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 3: Agent Architecture</h1>
+      <p class="text-sm md:text-base">Explore how AI agents are structured and interact with the world</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Common Architectures</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Reactive agents: respond to environment with no internal state</li>
+        <li>Deliberative agents: maintain beliefs, goals, and plans</li>
+        <li>Hybrid agents: combine reactive and deliberative strategies</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Perception, Memory, and Actuation</h2>
+      <p class="text-gray-800">
+        An agent typically includes components for sensing inputs, storing knowledge, making decisions, and acting.
+        Understanding this flow is key to designing effective AI systems.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Quiz: Which is which?</h2>
+      <p class="mb-2 text-gray-700">Which architecture is best for rapidly reacting to real-time changes without planning?</p>
+      <form id="quiz-form" class="space-y-2">
+        <label class="block"><input type="radio" name="quiz" value="A" class="mr-2"> Deliberative</label>
+        <label class="block"><input type="radio" name="quiz" value="B" class="mr-2"> Reactive</label>
+        <label class="block"><input type="radio" name="quiz" value="C" class="mr-2"> Hybrid</label>
+        <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Submit Answer</button>
+      </form>
+      <p id="quiz-result" class="mt-4 font-semibold text-green-600 hidden">Correct! ✅</p>
+    </section>
+
+    <a href="module4.html" class="block mt-10 text-center bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Next Module: Tools & Frameworks →</a>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const answer = document.querySelector('input[name="quiz"]:checked');
+      const result = document.getElementById("quiz-result");
+      if (answer && answer.value === "B") {
+        result.textContent = "Correct! ✅";
+        result.classList.remove("hidden", "text-red-600");
+        result.classList.add("text-green-600");
+      } else {
+        result.textContent = "Try again! ❌";
+        result.classList.remove("hidden", "text-green-600");
+        result.classList.add("text-red-600");
+      }
+    });
+  </script>
+</body>
+</html>
