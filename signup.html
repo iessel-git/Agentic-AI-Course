@@ -44,8 +44,12 @@
       if (error) {
         alert('Signup failed: ' + error.message);
       } else {
-        form.reset();
         status.classList.remove('hidden');
+        form.reset();
+        // Redirect after a short delay
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 2000); // 2 seconds
       }
     });
   </script>
