@@ -1,0 +1,25 @@
+/* style.css - Global styles for Agentic AI Course */
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+ul {
+  margin-top: 1em;
+  padding-left: 1.5em;
+}
+
+/* Tailwind is already included via CDN in each HTML file for layout and responsiveness */
