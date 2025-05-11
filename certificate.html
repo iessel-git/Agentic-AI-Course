@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate of Completion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white shadow-xl border-2 border-yellow-500 rounded-2xl p-10 max-w-3xl w-full text-center">
+    <h1 class="text-4xl font-bold mb-4 text-yellow-600">Certificate of Completion</h1>
+    <p class="text-lg mb-4">This certifies that</p>
+
+    <input
+      id="nameInput"
+      type="text"
+      placeholder="Enter your full name"
+      class="text-xl text-center font-semibold text-gray-800 border-b-2 border-gray-400 outline-none mb-6 w-full md:w-2/3 mx-auto p-2"
+    />
+
+    <p class="text-lg mb-4">
+      has successfully completed the <strong>Agentic AI Mastery Course</strong><br />
+      by <strong>CSE Tech Solution</strong>.
+    </p>
+
+    <p class="text-sm text-gray-500 mt-6">Issued on: <span id="date"></span></p>
+
+    <button
+      onclick="generateCertificate()"
+      class="mt-8 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full transition"
+    >
+      Generate Certificate
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString();
+
+    function generateCertificate() {
+      const name = document.getElementById('nameInput').value.trim();
+      if (name === '') {
+        alert('Please enter your name');
+      } else {
+        alert(`Congratulations, ${name}! Your certificate is ready.`);
+        // Optional: trigger a download or email flow here in the future
+      }
+    }
+  </script>
+</body>
+</html>
