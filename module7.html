@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 7: Build Your Own Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 7: Build Your Own Agent</h1>
+      <p class="text-sm md:text-base">Step-by-step instructions to create a simple Agentic AI</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Overview</h2>
+      <p class="text-gray-800">
+        Now that you understand the theory, it's time to put it into practice. In this module, you'll build a basic autonomous agent that can make decisions and perform actions based on user input.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Tools You’ll Need</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Basic HTML/CSS for interface</li>
+        <li>JavaScript to drive logic</li>
+        <li>Optional: Supabase for memory or backend</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Code Example</h2>
+      <pre class="bg-gray-100 p-4 rounded text-sm overflow-x-auto"><code>
+// A simple decision-making agent
+function agent(input) {
+  if (input.includes("weather")) {
+    return "The weather is sunny.";
+  } else if (input.includes("joke")) {
+    return "Why don't robots take vacations? They recharge at home!";
+  } else {
+    return "I'm still learning! Try asking something else.";
+  }
+}
+
+// Example use:
+console.log(agent("Tell me a joke"));
+      </code></pre>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Hands-on Task</h2>
+      <p class="text-gray-700 mb-4">Build an agent that responds to the following:</p>
+      <ul class="list-disc pl-6 space-y-1 text-gray-700">
+        <li>User says “hello” → agent says “Hi, I’m your assistant agent.”</li>
+        <li>User mentions “help” → agent offers 2 suggestions</li>
+        <li>Else → agent says it’s learning</li>
+      </ul>
+    </section>
+
+    <a href="module8.html" class="block mt-10 text-center bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Next Module: Final Exam & Certificate →</a>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+</body>
+</html>
