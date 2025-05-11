@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 1: Introduction to Agentic AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 1: Introduction to Agentic AI</h1>
+      <p class="text-sm md:text-base">Understand what Agentic AI is and why it matters</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">What is Agentic AI?</h2>
+      <p class="text-base text-gray-800 mb-4">
+        Agentic AI refers to artificial intelligence systems that act as autonomous agents—
+        capable of perceiving their environment, making decisions, and taking actions to achieve goals.
+        These systems simulate the behavior of human or machine agents that operate independently in complex environments.
+      </p>
+      <p class="text-base text-gray-800">
+        This module covers the basic definitions, history, and emerging importance of agent-based AI
+        in modern applications such as personal assistants, robotics, and multi-agent simulations.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Key Learning Outcomes</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Define Agentic AI and its core components</li>
+        <li>Differentiate between reactive and deliberative agents</li>
+        <li>Explore real-world use cases for Agentic AI</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Quick Quiz</h2>
+      <p class="mb-2 text-gray-700">Which of the following best describes an Agentic AI system?</p>
+      <form id="quiz-form" class="space-y-2">
+        <label class="block"><input type="radio" name="quiz" value="A" class="mr-2"> A simple rule-based program</label>
+        <label class="block"><input type="radio" name="quiz" value="B" class="mr-2"> A system that passively stores data</label>
+        <label class="block"><input type="radio" name="quiz" value="C" class="mr-2"> An AI that can perceive, decide, and act autonomously</label>
+        <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Submit Answer</button>
+      </form>
+      <p id="quiz-result" class="mt-4 font-semibold text-green-600 hidden">Correct! 🎉</p>
+    </section>
+
+    <a href="module2.html" class="block mt-10 text-center bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Next Module: Core Concepts →</a>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const answer = document.querySelector('input[name="quiz"]:checked');
+      if (answer && answer.value === "C") {
+        document.getElementById("quiz-result").classList.remove("hidden");
+        document.getElementById("quiz-result").textContent = "Correct! 🎉";
+      } else {
+        document.getElementById("quiz-result").classList.remove("hidden");
+        document.getElementById("quiz-result").textContent = "Try again! ❌";
+        document.getElementById("quiz-result").classList.replace("text-green-600", "text-red-600");
+      }
+    });
+  </script>
+</body>
+</html>
