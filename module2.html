@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 2: Core Concepts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 2: Core Concepts of Agentic AI</h1>
+      <p class="text-sm md:text-base">Learn the foundations that make Agentic AI work</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Key Concepts Covered</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Perception, decision-making, and action cycles</li>
+        <li>Internal models and beliefs</li>
+        <li>Goal-setting and planning</li>
+        <li>Utility functions and rational behavior</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Understanding the Agent Loop</h2>
+      <p class="text-gray-800">
+        Agentic systems operate in a continuous loop: sense the environment, update beliefs,
+        make decisions, and perform actions. This loop is what gives agents their autonomy and ability to adapt.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Quick Quiz</h2>
+      <p class="mb-2 text-gray-700">What is the purpose of an agent's "internal model"?</p>
+      <form id="quiz-form" class="space-y-2">
+        <label class="block"><input type="radio" name="quiz" value="A" class="mr-2"> To store passwords</label>
+        <label class="block"><input type="radio" name="quiz" value="B" class="mr-2"> To remember website colors</label>
+        <label class="block"><input type="radio" name="quiz" value="C" class="mr-2"> To represent the environment and guide decisions</label>
+        <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Submit Answer</button>
+      </form>
+      <p id="quiz-result" class="mt-4 font-semibold text-green-600 hidden">Correct! ✅</p>
+    </section>
+
+    <a href="module3.html" class="block mt-10 text-center bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Next Module: Agent Architecture →</a>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const answer = document.querySelector('input[name="quiz"]:checked');
+      if (answer && answer.value === "C") {
+        const result = document.getElementById("quiz-result");
+        result.classList.remove("hidden");
+        result.textContent = "Correct! ✅";
+        result.classList.remove("text-red-600");
+        result.classList.add("text-green-600");
+      } else {
+        const result = document.getElementById("quiz-result");
+        result.classList.remove("hidden");
+        result.textContent = "Try again! ❌";
+        result.classList.remove("text-green-600");
+        result.classList.add("text-red-600");
+      }
+    });
+  </script>
+</body>
+</html>
