@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 5: Multi-Agent Systems</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 5: Multi-Agent Systems</h1>
+      <p class="text-sm md:text-base">Discover how multiple AI agents collaborate to solve complex tasks</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">What Are Multi-Agent Systems?</h2>
+      <p class="text-gray-800">
+        A multi-agent system consists of multiple agents that interact in a shared environment. Each agent has its own knowledge, goals, and behavior, but they can coordinate to solve problems that are too complex for a single agent.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Key Features</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li><strong>Decentralization:</strong> Agents operate independently, without a central controller.</li>
+        <li><strong>Cooperation:</strong> Agents can work together, share data, and divide responsibilities.</li>
+        <li><strong>Scalability:</strong> Systems can scale as more agents are added.</li>
+        <li><strong>Emergent Behavior:</strong> Complex behaviors arise from simple local interactions.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Example Use Cases</h2>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Swarm robotics</li>
+        <li>Traffic control systems</li>
+        <li>Collaborative research agents</li>
+        <li>Autonomous negotiation in marketplaces</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">Quick Challenge</h2>
+      <p class="mb-2 text-gray-700">What is the main advantage of decentralization in a multi-agent system?</p>
+      <form id="quiz-form" class="space-y-2">
+        <label class="block"><input type="radio" name="quiz" value="A" class="mr-2"> Faster user interfaces</label>
+        <label class="block"><input type="radio" name="quiz" value="B" class="mr-2"> Greater independence and scalability</label>
+        <label class="block"><input type="radio" name="quiz" value="C" class="mr-2"> Better database integration</label>
+        <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Submit Answer</button>
+      </form>
+      <p id="quiz-result" class="mt-4 font-semibold hidden">Answer will appear here</p>
+    </section>
+
+    <a href="module6.html" class="block mt-10 text-center bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Next Module: Testing & Evaluation →</a>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const answer = document.querySelector('input[name="quiz"]:checked');
+      const result = document.getElementById("quiz-result");
+      if (answer && answer.value === "B") {
+        result.textContent = "Correct! ✅ Decentralization allows greater independence and scalability.";
+        result.classList.remove("hidden", "text-red-600");
+        result.classList.add("text-green-600");
+      } else {
+        result.textContent = "Incorrect. ❌ Try again!";
+        result.classList.remove("hidden", "text-green-600");
+        result.classList.add("text-red-600");
+      }
+    });
+  </script>
+</body>
+</html>
