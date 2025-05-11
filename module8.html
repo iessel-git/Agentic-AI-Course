@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 8: Final Exam & Certificate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-blue-600 text-white p-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-2xl md:text-4xl font-bold">Module 8: Final Exam & Certificate</h1>
+      <p class="text-sm md:text-base">Test your knowledge and claim your certificate</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold mb-4">Final Assessment</h2>
+      <p class="text-gray-800">
+        You're almost there! Complete this brief quiz to test your understanding of Agentic AI.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <form class="space-y-6" id="exam-form">
+        <div>
+          <label class="block mb-2 font-medium">1. What is a key characteristic of Agentic AI?</label>
+          <select class="w-full border-gray-300 rounded p-2" required>
+            <option value="">Choose an answer</option>
+            <option>Follows explicit instructions only</option>
+            <option>Acts autonomously to achieve goals</option>
+            <option>Requires constant human input</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-medium">2. Which tool is commonly used to build AI agents?</label>
+          <select class="w-full border-gray-300 rounded p-2" required>
+            <option value="">Choose an answer</option>
+            <option>Photoshop</option>
+            <option>LangChain</option>
+            <option>Excel</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-medium">3. What is one benefit of multi-agent systems?</label>
+          <select class="w-full border-gray-300 rounded p-2" required>
+            <option value="">Choose an answer</option>
+            <option>Single point of failure</option>
+            <option>Better collaboration and task delegation</option>
+            <option>Faster manual operation</option>
+          </select>
+        </div>
+
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+          Submit Exam
+        </button>
+      </form>
+
+      <div id="result" class="mt-6 text-green-600 font-bold hidden">
+        ✅ Congratulations! You’ve passed the exam. 
+        <a href="certificate.html" class="text-blue-600 underline">Click here to view your certificate</a>.
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <p class="text-gray-700">Need help or want to give feedback? <a href="mailto:support@csetechsolution.com" class="text-blue-600 underline">Contact us</a></p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500 mt-10">
+    &copy; 2025 CSE Tech Solution. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('exam-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('result').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
