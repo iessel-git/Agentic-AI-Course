@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Agentic AI Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-md mx-auto mt-20 bg-white p-6 rounded shadow">
+    <h1 class="text-2xl font-bold mb-4 text-center">Sign Up for Agentic AI Course</h1>
+    <form id="signup-form" class="space-y-4">
+      <div>
+        <label class="block mb-1" for="email">Email</label>
+        <input id="email" type="email" required class="w-full px-4 py-2 border rounded" />
+      </div>
+      <div>
+        <label class="block mb-1" for="password">Password</label>
+        <input id="password" type="password" required class="w-full px-4 py-2 border rounded" />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Join</button>
+    </form>
+    <p id="status" class="mt-4 text-center text-sm text-green-600 hidden">Thank you! You are successfully signed up.</p>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const supabase = createClient(
+      'https://lhaarirvwszwbmllobef.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoYWFyaXJ2d3N6d2JtbGxvYmVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY5MjY0MDIsImV4cCI6MjA2MjUwMjQwMn0.FJ0XlFu-rxC3A4YVhl103LfZ1jznFckZdvmKPm_s4hE'
+    );
+
+    const form = document.getElementById('signup-form');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = form.email.value;
+      const password = form.password.value;
+
+      const { data, error } = await supabase.auth.signUp({ email, password });
+
+      if (error) {
+        alert('Signup failed: ' + error.message);
+      } else {
+        form.reset();
+        status.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
